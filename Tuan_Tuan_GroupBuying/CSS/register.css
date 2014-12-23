@@ -1,0 +1,63 @@
+﻿@charset "utf-8";
+
+.all {
+    
+    margin-top :0;
+   margin: auto;
+    position: relative;
+    top: 0px;
+}
+
+.main3 {
+    width :796px;
+    height :358px;
+   border :1px solid #B1B1B1; 
+    margin-top :0;
+   margin: auto;
+    position: relative;
+    top: 43px;
+}
+
+.main1 {
+    width: 397px;
+    height :356px;
+    border :1px solid #B1B1B1; 
+    float: left;
+    top: 0px;
+    position: relative;
+}
+
+.main2 {
+    width :397px;
+    height :356px;
+    border :1px solid #B1B1B1;
+    top: 0;
+    right: 0px;
+    float :left  ;   
+    position: relative;
+}
+
+.txt1 {
+    top: 66px;
+    left: 34px;
+    position: absolute;
+    width: 328px;
+    height: 255px;
+    font-size :30px;
+
+}
+
+.btn1 {
+    width :100px;
+    position: absolute;
+    font-size :20px;
+    left: 109px;
+    top: 168px;
+}
+
+.txt2 {
+    width :300px;
+    margin-top :150px;
+    margin-left :50px;
+    font-size :20px;
+}

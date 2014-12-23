@@ -1,0 +1,101 @@
+﻿body {
+}
+
+.all {
+    width :800px;
+    height: 600px;
+  
+    margin-top :20px;
+    margin: auto;
+    position: relative;
+   
+}
+
+.main1 {
+    width :800px;
+    height :550px;
+    border :1px solid #808080;
+    position :relative ;
+}
+
+.txt1 {
+    width :200px;
+    font-size :22px;
+    height :50px;
+    float :left ;
+    margin-left :-30px;
+    margin-top :10px;
+}
+
+.main2 {
+    width :780px;
+    height :100px;
+    position :relative ;
+    margin-top :50px;
+    margin-left :10px;
+  
+    background-image :url(../images/Announcement.jpg) ;
+
+
+}
+
+.main3 {
+    width: 969px;
+    margin-left :0;
+    position :relative ;
+}
+
+.txt2 {
+    font-size: 42px;
+    color :#ff6a00;
+}
+
+.txt3 {
+    font-size: 20px;
+    color :#524e4e;
+    width: 924px;
+    position :relative ;
+    left: 27px;
+    top: 10px;
+    text-align: left;
+}
+
+.main4 {
+    width :780px;
+    height :100px;
+    position :relative ;
+    margin-top :20px;
+    margin-left :10px;
+    background-image :url(../images/Announcement.jpg) ;
+}
+
+.txt4 {
+    font-size: 15px;
+    color :#524e4e;
+    width: 100%;
+    top: 3px;
+    position :relative ;
+}
+
+.Box_Text{
+    margin: 0;
+
+    position: absolute;
+    top: 5px;
+    left: 40px;
+}
+
+.Box_Text_Box{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    text-align: left;
+    border-bottom-color: #CCCCCC;
+    font-size: 23px;
+    color: white;
+    background-color: rgb(196, 0, 0);
+    height: 44px;
+    margin: 0;
+    position: relative;
+    top: 0;
+    border-top-left-radius: 10px;  border-top-right-radius: 10px;
+}

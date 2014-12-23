@@ -1,0 +1,101 @@
+﻿body {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #ffffff;
+}
+
+.Top {
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    background-color: rgb(189, 0, 0);
+    z-index: 1;
+}
+
+.Top_Logo_Box {
+    position: absolute;
+    width: 238px;
+    height: 86px;
+    left: 100px;
+}
+
+.Top_Text {
+    position: absolute;
+    color: #FFF;
+    left: 320px;
+    top: 28px;
+    font-size: 29px;
+}
+
+
+.Top_Logo_Image {
+    width: 70px;
+}
+
+.Top_Logo_Text1 {
+    position: absolute;
+    left: 92px;
+    top: 18px;
+    color: #FFF;
+    font-size: 22px;
+    margin: 0;
+    font-family: "youyuan";
+}
+
+.Top_Logo_Text2 {
+    position: absolute;
+    left: 92px;
+    top: 44px;
+    color: #FFF;
+    margin: 0;
+    font-size: 17px;
+    font-family: 'Glyphicons Halflings';
+}
+
+.Top_User_Box {
+    position: absolute;
+    right: 10px;
+    width: 187px;
+    height: 73px;
+}
+
+.Left {
+    position: absolute;
+    height: 100%;
+    width: 241px;
+}
+
+.Left_Menu {
+    position: absolute;
+    width: 190px;
+    left: 28px;
+    padding-top: 100px;
+}
+
+.Right {
+    position: absolute;
+    height: 100%;
+    left: 240px;
+    padding-top: 100px;
+    width: 80%;
+}
+
+.Search_Box {
+    height: 40px;
+    margin-left: 0px;
+}
+
+.Search_Box_DropDownList {
+    position: relative;
+    height: 30px;
+    float: left;
+    left: 0px;
+    width: 111px;
+    top: 5px;
+}
+
+.Search_Box_DropDownList2 {
+    left: 5px;
+}

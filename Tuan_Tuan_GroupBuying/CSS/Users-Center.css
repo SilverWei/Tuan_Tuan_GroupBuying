@@ -1,0 +1,46 @@
+﻿body {
+}
+
+.Center_Left{
+position: relative;
+float: left;
+width: 30%;
+}
+
+#Left>div>p{
+    position: relative;
+    float: left;
+}
+
+#Left>div>p:first-child{
+    width: 76px;
+    text-align: right;
+}
+.Main_Right{
+    position: relative;
+
+    float: right;
+    width: 70%;
+}
+.Box_Text{
+    margin: 0;
+
+    position: absolute;
+    top: 5px;
+    left: 40px;
+}
+
+.Box_Text_Box{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    text-align: left;
+    border-bottom-color: #CCCCCC;
+    font-size: 23px;
+    color: white;
+    background-color: rgb(196, 0, 0);
+    height: 44px;
+    margin: 0;
+    position: relative;
+    top: 10px;
+    border-top-left-radius: 10px;  border-top-right-radius: 10px;
+}

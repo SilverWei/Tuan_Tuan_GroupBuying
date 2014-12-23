@@ -1,0 +1,210 @@
+﻿body {
+}
+
+.Sort {
+    position: relative;
+    /* overflow: visible; */
+}
+
+.Sort_Top_Box {
+    background-image: url(/images/Sort_Top.png);
+    color: #FFF;
+    height: 33px;
+}
+
+.Sort_Top_Text {
+    color: #FFF;
+    position: relative;
+    float: left;
+    top: 4px;
+    margin-left: 70px;
+    font-size: 17px;
+}
+
+.Sort_Top_Left_Text {
+    color: #FFF;
+    position: relative;
+    float: left;
+    height: 33px;
+    width: 250px;
+    font-size: 17px;
+    overflow: hidden;
+    line-height: 33px;
+}
+
+.Sort_Left {
+    position: relative;
+    float: left;
+    width: 250px;
+    height: 277px;
+    background-color: #2B2B2B;
+    /*background-image: url(/images/Sort_Right.png);*/
+    /* z-index: 1; */
+}
+
+.Sort_Left2 {
+    position: absolute;
+    width: 250px;
+    background-color: #2B2B2B;
+    top: 33px;
+    z-index: 1;
+    display: none;
+    overflow: visible;
+}
+
+ol > li {
+    color: #FFF;
+    height: 38px;
+    overflow: hidden;
+    line-height: 38px;
+}
+
+li > a {
+    color: #FFF;
+}
+
+ol > li:hover {
+    background-color: #000;
+    position: relative;
+    left: 10px;
+    border-radius: 10px;
+}
+
+
+.Sort_Right {
+    width: 774px;
+    height: 277px;
+    position: relative;
+    float: right;
+    background-color: #7C7C7C;
+}
+
+.Sort_Right_Main {
+    width: 670px;
+    height: 277px;
+}
+
+.Sort_Right_Small_Box {
+    background-color: #535353;
+    height: 100%;
+    width: 104px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+
+.Sort_Right_Small_Image {
+    border-style: solid;
+    border-width: 3px;
+    width: 100%;
+    height: 25%;
+    border-color: #5E0000;
+}
+
+.NewGoods {
+    top: 300px;
+    margin-top: 25px;
+    position: absolute;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.Title_Name_Box {
+    position: relative;
+    height: 40px;
+    left: 10px;
+    width: 1000px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #CCCCCC;
+}
+
+.Title_Name_Image {
+    position: relative;
+    float: left;
+    left: 10px;
+    top: 0px;
+}
+
+.Title_Name_Text {
+    position: relative;
+    float: left;
+    font-size: 26px;
+    margin-left: 14px;
+}
+
+.NewGoods_All_Box {
+    position: relative;
+}
+
+.NewGoods_First_Box {
+    position: relative;
+    float: left;
+    width: 320px;
+    left: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 446px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DBDBDB;
+    box-shadow: 1px 1px 4px #888888;
+}
+
+.NewGoods_Box {
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DBDBDB;
+    float: left;
+    width: 322px;
+    margin-left: 10px;
+    left: 5px;
+    margin-top: 10px;
+    height: 228px;
+    box-shadow: 1px 1px 4px #888888;
+}
+
+.NewGroupBuying {
+    top: 1542px;
+    margin-top: 25px;
+    position: absolute;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.Announcement {
+    margin-top: 25px;
+    top: 2787px;
+    position: absolute;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.Announcement_First_Box {
+    position: relative;
+    width: 97%;
+    left: 13px;
+    margin-top: 11px;
+    height: 128px;
+    border-style: solid;
+    border-width: 1px;
+    text-align: left;
+    border-color: #DBDBDB;
+    box-shadow: 1px 1px 4px #888888;
+}
+
+.Announcement_Box {
+    position: relative;
+    border-style: solid;
+    float: left;
+    height: 101px;
+    width: 486px;
+    left: 13px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-width: 1px;
+    border-color: #DBDBDB;
+    text-align: left;
+    box-shadow: 1px 1px 4px #888888;
+}

@@ -1,0 +1,26 @@
+﻿body {
+}
+
+.ShoppingCart_Box{
+    width: 73px;
+    height: 122px;
+    position: fixed;
+    right: 37px;
+    bottom: 240px;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.ShoppingCart_Image{
+    color: white;
+    position: absolute;
+    font-size: 40px;
+    left: 20px;
+    bottom: 1px;
+}
+
+.ShoppingCart_Text{
+    position: absolute;
+    left: 26px;
+    bottom: 42px;
+    font-size: 40px;
+}

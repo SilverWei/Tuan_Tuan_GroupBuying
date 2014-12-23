@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Home-Master.master" AutoEventWireup="true" CodeFile="Nav-Master.master.cs" Inherits="Nav_Master" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+    <link href="CSS/Nav-Master.css" rel="stylesheet" />
+    <script src="JS/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Sort_Top_Left_Show").hover(function () {
+                $(".Sort_Left").slideToggle("fast");
+            });
+        });
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Main" runat="Server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+    <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server"></telerik:RadStyleSheetManager>
+    <div class="Sort_Top_Box">
+        <div id="Sort_Top_Left_Show">
+            <div class="Sort_Top_Left_Text">所有商品分类▼</div>
+            <div class="Sort_Left">
+                <ol style="margin: 0; padding: 0; list-style: none;">
+                    <telerik:RadListView ID="RadListView1" runat="server" DataSourceID="SqlDataSource1">
+                        <ItemTemplate>
+                            <li><a href="Search.aspx?GS1=<%#Eval("GS1_ID") %>"><%#Eval("GS1_Name") %></a> </li>
+                        </ItemTemplate>
+                    </telerik:RadListView>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ConnectionStrings:Tuan Tuan GroupBuying%>" SelectCommand="select * From [t_GoodsSort1st]"></asp:SqlDataSource>
+                </ol>
+            </div>
+        </div>
+        <a href="Home.aspx" class="Sort_Top_Text">首页</a>
+        <a href="Search.aspx" class="Sort_Top_Text">商品</a>
+        <a href="SearchGB.aspx" class="Sort_Top_Text">团购</a>
+        <a href="Announcement.aspx" class="Sort_Top_Text">公告</a>
+        
+    </div>
+
+    <asp:ContentPlaceHolder ID="Main" runat="server" />
+
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ShoppingCart_Box" runat="Server">
+    <asp:ContentPlaceHolder ID="ShoppingCart_Box" runat="server" />
+</asp:Content>

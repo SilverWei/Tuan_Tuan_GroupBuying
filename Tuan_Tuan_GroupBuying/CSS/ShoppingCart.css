@@ -1,0 +1,36 @@
+﻿body {
+}
+
+.All{
+    position: relative;
+    
+    margin: auto;
+    background-color: rgb(240, 240, 240);
+    border-style: solid;  
+    border-width: 1px;  
+    border-color: #CCCCCC;
+    border-radius: 10px;
+}
+
+.Box_Text{
+    margin: 0;
+
+    position: absolute;
+    top: 5px;
+    left: 40px;
+}
+
+.Box_Text_Box{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    text-align: left;
+    border-bottom-color: #CCCCCC;
+    font-size: 23px;
+    color: white;
+    background-color: rgb(196, 0, 0);
+    height: 44px;
+    margin: 0;
+    position: relative;
+    top: 0;
+    border-top-left-radius: 10px;  border-top-right-radius: 10px;
+}

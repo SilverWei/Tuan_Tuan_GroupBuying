@@ -1,0 +1,117 @@
+﻿@charset "utf-8";
+
+body {
+}
+
+.all {
+    width: 1024px;
+    position: relative;
+    top: 0;
+    margin-bottom: 10px;
+}
+
+.main6 {
+    margin: auto;
+    position: relative;
+    top: 0;
+    margin-bottom: 10px;
+}
+
+.main1 {
+    width: 750px;
+    position: relative;
+    margin-top: 5px;
+    height: 33px;
+    margin-left: 25px;
+}
+
+.txt1 {
+    position: relative;
+    float: left;
+    top: 10px;
+}
+
+.txt2 {
+    width: 100px;
+    margin-left: 300px;
+    position: relative;
+    margin-top: 3px;
+}
+
+.txt3 {
+    width: 352px;
+    position: relative;
+    float: left;
+    height: 40px;
+    left: 10px;
+}
+
+.main2 {
+    width: 750px;
+    position: relative;
+    border: 1px solid #B1B1B1;
+    margin-top: 20px;
+    height: 150px;
+    margin-left: 25px;
+}
+
+.main3 {
+    top: -11px;
+    position: relative;
+}
+
+.main4 {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    top: -10px;
+    padding-bottom: 25px;
+}
+
+.pic1 {
+    background-color: #B1B1B1;
+    height: 205px;
+    width: 174px;
+    float: left;
+    margin-left: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.main5 {
+    position: relative;
+}
+
+.NewGoods_Box {
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DBDBDB;
+    float: left;
+    width: 322px;
+    margin-left: 10px;
+    left: 5px;
+    margin-bottom: 10px;
+    height: 228px;
+    box-shadow: 1px 1px 4px #888888;
+}
+
+.Home-GoodsTab-First-Text_Box {
+    position: relative;
+    width: 290px;
+    margin: auto;
+    top: 296px;
+}
+
+.GS2Text {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+}
+
+.SearchName {
+    position: relative;
+    float: left;
+    top: -12px;
+}

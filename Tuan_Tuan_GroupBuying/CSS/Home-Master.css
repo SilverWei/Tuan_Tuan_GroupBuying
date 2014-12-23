@@ -1,0 +1,185 @@
+body {
+    font: 100% 微软雅黑;
+    margin: 0; /* 最好将 body 元素的边距和填充设置为 0 以覆盖不同的浏览器默认值 */
+    padding: 0;
+    text-align: center; /* 在 IE 5* 浏览器中，这会将容器居中。文本随后将在 #container 选择器中设置为默认左对齐 */
+    color: #000;
+    height: 100%; /*这里将高度设置为100%是这个布局实现自适应高度的关键，只有这里设置了高度，下面div的高度设置才起作用*/
+}
+
+.Home-top{
+    height: 205px;
+    position: relative;
+    margin: auto;
+}
+
+.User{
+    position: relative;
+    height: 29px;
+    width: 100%;
+    background-color: #EEEEEE;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #CCCCCC;
+}
+
+.User_Landed{
+    position: relative;
+    right: 40px;
+    float: right;
+    top: 5px;
+    font-size: 14px;
+    color: #888;
+}
+
+.User_Landed2{
+    position: relative;
+    right: 40px;
+    float: right;
+    top: 5px;
+    font-size: 14px;
+    color: #888;
+}
+.User_Landed:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.User_Text{
+    position: relative;
+    float: left;
+    color: #888;
+    font-size: 14px;
+    margin-left: 41px;
+    top: 5px;
+}
+
+.User_Text:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.User_Text_Box{
+    width: 1024px;
+    margin: auto;
+    position: relative;
+}
+
+.Logo{
+    position: relative;
+    width: 1024px;
+    margin: auto;
+}
+
+.Logo_Image{
+    position: relative;
+
+    float: left;
+    left: 55px;
+    top: 25px;
+    width: 300px;
+}
+
+.Search_Box{
+    position: relative;
+    float: left;
+    width: 558px;
+    top: 32px;
+    left: 90px;
+    height: 110px;
+}
+
+.Search_Text_Box{
+    position: relative;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(213, 0, 0);
+    border-right-width: 100px;
+    height: 32px;
+    width: 500px;
+    top: 14px;
+}
+
+.Search_Text{
+    position: relative;
+    float: left;
+    left: 1px;
+    font-size: 17px;
+    width: 321px;
+    top: 0px;
+    height: 26px;
+    border: 0px solid #F00;
+}
+
+.Search_Box_DropDownList{
+    width: 76px;
+
+    height: 28px;
+    position: absolute;
+    right: 0px;
+    border-color: #EB0400;
+    top: -1px;
+}
+
+.Search_Top_Text{
+    position: relative;
+
+    float: left;
+    font-size: 15px;
+    color: #8A8A8A;
+    margin: 0;
+    top: 10px;
+    left: 10px;
+}
+
+.Search_Text_Button{
+    height: 32px;
+    position: absolute;
+    right: -96px;
+    top: 0px;
+    width: 90px;
+    color: #FFF;
+    font-size: 17px;
+    font-family: 微软雅黑;
+}
+
+.Main{
+    position: relative;
+    width: 1024px;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 37px;
+    min-height: 550px;
+}
+
+.Imprint{
+    color: #858585;
+    border-top-style: solid;  
+    border-top-width: 1px;  
+    border-top-color: #CCCCCC;
+    background-color: #E9E9E9;
+    position: relative;
+}
+
+.Sort_Top_Blackground{
+    position: absolute;
+    height: 33px;
+    width: 100%;
+    bottom: -33px;
+}
+
+.Sort_Top_Blackground_Left{
+    height: 100%;
+    background-color: #000;
+    width: 50%;
+    position: relative;
+    float: left;
+}
+
+.Sort_Top_Blackground_Right{
+    background-color: #C40000;
+    height: 100%;
+    width: 50%;
+    position: relative;
+    float: right;
+}

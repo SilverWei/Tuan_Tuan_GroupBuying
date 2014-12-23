@@ -1,0 +1,64 @@
+﻿.All{
+    background-color: rgb(36, 89, 119);
+}
+
+.Main{
+    width: 730px;
+
+    height: 400px;
+    margin: auto;
+    top: 177px;
+    position: relative;
+}
+
+.Logo_Box{
+    width: 49%;
+
+    position: relative;
+    float: left;
+    height: 100%;
+}
+
+.Logo_Image{
+    position: absolute;
+
+    top: 80px;
+    left: 120px;
+}
+
+.Logo_Text1{
+    position: absolute;
+    left: 82px;
+    top: 260px;
+    color: #FFF;
+    font-size: 28px;
+    margin: 0;
+    font-family: "youyuan";
+}
+
+.Logo_Text2{
+    position: absolute;
+    left: 202px;
+    top: 274px;
+    color: #FFF;
+    margin: 0;
+    font-size: 17px;
+    font-family: 'Glyphicons Halflings';
+}
+
+.Logo_Text3{
+    position: absolute;
+    color: #FFF;
+    left: 60px;
+    top: 328px;
+    font-size: 42px;
+}
+
+.Landed{
+    width: 42%;
+    position: relative;
+    float: right;
+    height: 100%;
+
+    top: 90px;
+}

@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home-Master.master.cs" Inherits="All" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="CSS/Home-Master.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+    <link href="CSS/buttons.css" rel="stylesheet" />
+    <link href="CSS/ShoppingCart_Box.css" rel="stylesheet" />
+    <link href="usmanhalalit/css/charisma-app.css" rel="stylesheet" />
+    <link href="usmanhalalit/css/bootstrap-cerulean.min.css" rel="stylesheet" />
+    <link href="usmanhalalit/css/charisma-app.css" rel="stylesheet" />
+    <link href='usmanhalalit/bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet' />
+    <link href='usmanhalalit/bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <link href='usmanhalalit/bower_components/chosen/chosen.min.css' rel='stylesheet' />
+    <link href='usmanhalalit/bower_components/colorbox/example3/colorbox.css' rel='stylesheet' />
+    <link href='usmanhalalit/bower_components/responsive-tables/responsive-tables.css' rel='stylesheet' />
+    <link href='usmanhalalit/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet' />
+    <link href='usmanhalalit/css/jquery.noty.css' rel='stylesheet' />
+    <link href='usmanhalalit/css/noty_theme_default.css' rel='stylesheet' />
+    <link href='usmanhalalit/css/elfinder.min.css' rel='stylesheet' />
+    <link href='usmanhalalit/css/elfinder.theme.css' rel='stylesheet' />
+    <link href='usmanhalalit/css/jquery.iphone.toggle.css' rel='stylesheet' />
+    <link href='usmanhalalit/css/uploadify.css' rel='stylesheet' />
+    <link href='usmanhalalit/css/animate.min.css' rel='stylesheet' />
+    <link rel="Shortcut Icon" href="images/Logo3.png" />
+</head>
+<body style="background-color: #E9E9E9;">
+    <form id="form1" runat="server">
+        <div style="background-color: #FFF;">
+            <div class="Home-top">
+                <div class="User">
+                    <div class="User_Text_Box">
+                        <a href="Management-Goods.aspx" class="User_Text">后台管理</a>
+                        <a href="ShoppingCart.aspx" class="User_Text">购物车</a>
+                        <a href="OrdersSort.aspx" class="User_Text">订单状态</a>
+                        <a href="Users-Center.aspx" class="User_Text">个人资料/历史订单</a>
+                        <div id="User_Box_Null" visible="true" runat="server">
+                            <a href="register.aspx" class="User_Landed">注册</a>
+                            <p class="User_Landed">/ </p>
+                            <a href="Landed.aspx" class="User_Landed">登录</a>
+                        </div>
+
+                        <div id="User_Box" runat="server" visible="false" class="User_Landed2">
+                            Hi! <a href="Users-Center.aspx"><b id="User_Text" runat="server"></b></a>欢迎来到团团商城
+                            <asp:Button ID="UserId_Close" runat="server" OnClick="UserId_Close_Click" Style="font-size: 12px; padding: 7px; height: 20px; line-height: 5px;" class="button glow button-rounded button-flat-caution" Text="注销" />
+                        </div>
+                    </div>
+                </div>
+                <div class="Logo">
+                    <a href="Home.aspx">
+                        <img src="/images/logo.png" alt="" class="Logo_Image" /></a>
+                    <div class="Search_Box">
+                        <asp:Panel ID="Panel1" runat="server" DefaultButton="SearchButton">
+                            <div class="Search_Text_Box">
+                                <input type="text" value="" id="Search_Text" runat="server" class="Search_Text" />
+                                <asp:DropDownList CssClass="Search_Box_DropDownList" ID="DropDownList1" runat="server">
+                                    <asp:ListItem Selected="True" Value="0">商品</asp:ListItem>
+                                    <asp:ListItem Value="1">团购活动</asp:ListItem>
+                                </asp:DropDownList>
+                                <asp:LinkButton ID="SearchButton" OnClick="SearchButton_Click" CssClass="Search_Text_Button" runat="server">搜索</asp:LinkButton>
+                            </div>
+                        </asp:Panel>
+                    </div>
+                </div>
+                <div class="Sort_Top_Blackground">
+                    <div class="Sort_Top_Blackground_Left"></div>
+                    <div class="Sort_Top_Blackground_Right"></div>
+                </div>
+            </div>
+            <div class="Main">
+                <asp:ContentPlaceHolder ID="Main" runat="server" />
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="ShoppingCart_Box" runat="server" />
+        <div class="Imprint">
+            <p>请使用 1024*768 IE8.0 或更高版本浏览器浏览本站点, 以保证最佳阅读效果</p>
+            <p>公司电话: 010-88588888/22/23/24/25 公司传真: 86-10-88588888</p>
+            <p>客服热线: 800-810-1118/400-810-1118  E-mail：yi@163.com</p>
+            <p>© Copyright  2011 团团数码商城 版权所有 All Rights Reserved</p>
+        </div>
+
+    </form>
+    <script src="usmanhalalit/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- library for cookie management -->
+    <script src="usmanhalalit/js/jquery.cookie.js"></script>
+    <!-- calender plugin -->
+    <script src='usmanhalalit/bower_components/moment/min/moment.min.js'></script>
+    <script src='usmanhalalit/bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+    <!-- data table plugin -->
+    <script src='usmanhalalit/js/jquery.dataTables.min.js'></script>
+
+    <!-- select or dropdown enhancer -->
+    <script src="usmanhalalit/bower_components/chosen/chosen.jquery.min.js"></script>
+    <!-- plugin for gallery image view -->
+    <script src="usmanhalalit/bower_components/colorbox/jquery.colorbox-min.js"></script>
+    <!-- notification plugin -->
+    <script src="usmanhalalit/js/jquery.noty.js"></script>
+    <!-- library for making tables responsive -->
+    <script src="usmanhalalit/bower_components/responsive-tables/responsive-tables.js"></script>
+    <!-- tour plugin -->
+    <script src="usmanhalalit/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+    <!-- star rating plugin -->
+    <script src="usmanhalalit/js/jquery.raty.min.js"></script>
+    <!-- for iOS style toggle switch -->
+    <script src="usmanhalalit/js/jquery.iphone.toggle.js"></script>
+    <!-- autogrowing textarea plugin -->
+    <script src="usmanhalalit/js/jquery.autogrow-textarea.js"></script>
+    <!-- multiple file upload plugin -->
+    <script src="usmanhalalit/js/jquery.uploadify-3.1.min.js"></script>
+    <!-- history.js for cross-browser state change on ajax -->
+    <script src="usmanhalalit/js/jquery.history.js"></script>
+    <!-- application script for Charisma demo -->
+    <script src="usmanhalalit/js/charisma.js"></script>
+
+</body>
+</html>
