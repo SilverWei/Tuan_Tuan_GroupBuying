@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:50   N/A    初版
+* V0.01  2014/12/24 16:15:53   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -18,7 +18,7 @@ using System;
 namespace TTGB.Model
 {
 	/// <summary>
-	/// t_Users:实体类(属性说明自动提取数据库字段的描述信息)
+	/// 1
 	/// </summary>
 	[Serializable]
 	public partial class t_Users
@@ -32,10 +32,10 @@ namespace TTGB.Model
 		private bool _u_sex;
 		private DateTime? _u_birthday;
 		private string _u_phone;
-		private DateTime? _u_signup;
+		private DateTime _u_signup;
 		private string _u_email;
-		private int? _u_rank;
-		private int? _u_points;
+		private int _u_rank=0;
+		private int _u_points=0;
 		private string _u_password;
 		private string _u_note;
 		/// <summary>
@@ -89,7 +89,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime? U_SignUP
+		public DateTime U_SignUP
 		{
 			set{ _u_signup=value;}
 			get{return _u_signup;}
@@ -105,7 +105,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? U_Rank
+		public int U_Rank
 		{
 			set{ _u_rank=value;}
 			get{return _u_rank;}
@@ -113,7 +113,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? U_Points
+		public int U_Points
 		{
 			set{ _u_points=value;}
 			get{return _u_points;}

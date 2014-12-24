@@ -1,4 +1,3 @@
 \\SILVERACGAL\Users\dmql\Desktop\Tuan_Tuan_GroupBuying\Tuan_Tuan_GroupBuying\obj\Debug\Tuan_Tuan_GroupBuying.csprojResolveAssemblyReference.cache
 \\SILVERACGAL\Users\dmql\Desktop\Tuan_Tuan_GroupBuying\Tuan_Tuan_GroupBuying\obj\Debug\Tuan_Tuan_GroupBuying.dll
 C:\Users\dmql\Desktop\Tuan_Tuan_GroupBuying\Tuan_Tuan_GroupBuying\obj\Debug\Tuan_Tuan_GroupBuying.csprojResolveAssemblyReference.cache
-E:\Tuan_Tuan_GroupBuying\Tuan_Tuan_GroupBuying\obj\Debug\Tuan_Tuan_GroupBuying.csprojResolveAssemblyReference.cache

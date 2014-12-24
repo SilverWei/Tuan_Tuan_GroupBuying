@@ -48,6 +48,7 @@ public partial class Edit_GroupBuying : System.Web.UI.Page
             {
                 AddState.Text = "0";
             }
+            RadDatePicker1.SelectedDate = Convert.ToDateTime(Login1.Rows[0]["GB_EndDate"].ToString());
             DataTable Login2 = bllGoodsSort2nd.GetList("GS2_ID = " + Login1.Rows[0]["GS2_ID"].ToString()).Tables[0];
             G_GS1.Text = Login2.Rows[0]["GS1_ID"].ToString();
             SqlDataSource2.SelectCommand = "select * From [t_GoodsSort2nd] Where GS1_ID = " + Login2.Rows[0]["GS1_ID"].ToString();
@@ -62,7 +63,7 @@ public partial class Edit_GroupBuying : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        string SQLtext = "UPDATE [t_GroupBuying] SET GB_Name = '" + AddName.Text + "',GB_Brand='" + AddBrand.Text + "',GS2_ID='" + G_GS2.Text + "',GB_MarketPrice='" + decimal.Parse(AddMarketPrice.Text) + "',GB_GroupPrice='" + decimal.Parse(AddMarketPrice.Text) + "',GB_TotalNumber='" + int.Parse(TotleNumber.Text) + "'," + PicUPTop() + " GB_Text='" + AddText.Text + "',GB_State='" + (AddState.Text == "1" ? "true" : "false") + "' WHERE GB_ID = " + Request.QueryString["GB"].ToString();
+        string SQLtext = "UPDATE [t_GroupBuying] SET GB_Name = '" + AddName.Text + "',GB_Brand='" + AddBrand.Text + "',GB_EndDate='" + RadDatePicker1.SelectedDate + "',GS2_ID='" + G_GS2.Text + "',GB_MarketPrice='" + decimal.Parse(AddMarketPrice.Text) + "',GB_GroupPrice='" + decimal.Parse(AddMarketPrice.Text) + "',GB_TotalNumber='" + int.Parse(TotleNumber.Text) + "'," + PicUPTop() + " GB_Text='" + AddText.Text + "',GB_State='" + (AddState.Text == "1" ? "true" : "false") + "' WHERE GB_ID = " + Request.QueryString["GB"].ToString();
         DbHelperSQL.Query(SQLtext);
         PicUP();
         Response.Redirect("Edit_GroupBuying.aspx?"+(Request.QueryString["GS2"]!=null?"&GS2="+Request.QueryString["GS2"].ToString():"") +(Request.QueryString["Ser"]!=null?"&Ser="+Request.QueryString["Ser"].ToString():"") +(Request.QueryString["Wer"]!=null?"&Wer="+Request.QueryString["Wer"].ToString():"") +"&edit=1");

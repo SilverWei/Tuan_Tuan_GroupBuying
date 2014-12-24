@@ -73,6 +73,8 @@
     <Content Include="404.html" />
     <Content Include="Announcement-show.aspx" />
     <Content Include="Announcement.aspx" />
+    <Content Include="bin\Maticsoft.Common.dll" />
+    <Content Include="bin\Maticsoft.DBUtility.dll" />
     <Content Include="bin\Telerik.Web.UI.dll" />
     <Content Include="bin\Telerik.Web.UI.Skins.dll" />
     <Content Include="CSS\Announcement-show.css" />
@@ -2144,6 +2146,7 @@
       <DependentUpon>ShoppingCartDel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="TTGB\BLL\sysdiagrams.cs" />
     <Compile Include="TTGB\BLL\t_Administrators.cs" />
     <Compile Include="TTGB\BLL\t_Announcement.cs" />
     <Compile Include="TTGB\BLL\t_Goods.cs" />
@@ -2158,6 +2161,7 @@
     <Compile Include="TTGB\BLL\t_OrdersSort.cs" />
     <Compile Include="TTGB\BLL\t_Users.cs" />
     <Compile Include="TTGB\Class1.cs" />
+    <Compile Include="TTGB\DAL\sysdiagrams.cs" />
     <Compile Include="TTGB\DAL\t_Administrators.cs" />
     <Compile Include="TTGB\DAL\t_Announcement.cs" />
     <Compile Include="TTGB\DAL\t_Goods.cs" />
@@ -2171,6 +2175,7 @@
     <Compile Include="TTGB\DAL\t_OrdersShippingMethod.cs" />
     <Compile Include="TTGB\DAL\t_OrdersSort.cs" />
     <Compile Include="TTGB\DAL\t_Users.cs" />
+    <Compile Include="TTGB\Model\sysdiagrams.cs" />
     <Compile Include="TTGB\Model\t_Administrators.cs" />
     <Compile Include="TTGB\Model\t_Announcement.cs" />
     <Compile Include="TTGB\Model\t_Goods.cs" />
@@ -2685,8 +2690,8 @@
     <Content Include="usmanhalalit\php-version\ui.php" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\Tuan_Tuan_GroupBuying.csprojResolveAssemblyReference.cache" />
-    <Content Include="TTGB\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="App_Data\RadUploadTemp\RadUploadTestFile" />
+    <Content Include="TTGB\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2704,7 +2709,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="TTGB\TTGB.csproj">
-      <Project>{69371fbf-204d-4254-a049-d097781304cd}</Project>
+      <Project>{4e9df9ec-949c-4c54-939c-d3329c554c62}</Project>
       <Name>TTGB</Name>
     </ProjectReference>
   </ItemGroup>

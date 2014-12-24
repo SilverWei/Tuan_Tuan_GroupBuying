@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:45   N/A    初版
+* V0.01  2014/12/24 16:15:48   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -22,7 +22,7 @@ using TTGB.Model;
 namespace TTGB.BLL
 {
 	/// <summary>
-	/// t_Goods
+	/// 1
 	/// </summary>
 	public partial class t_Goods
 	{

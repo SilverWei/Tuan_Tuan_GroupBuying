@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:45   N/A    初版
+* V0.01  2014/12/24 16:15:47   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -22,7 +22,7 @@ using TTGB.Model;
 namespace TTGB.BLL
 {
 	/// <summary>
-	/// t_Announcement
+	/// 1
 	/// </summary>
 	public partial class t_Announcement
 	{
@@ -30,22 +30,6 @@ namespace TTGB.BLL
 		public t_Announcement()
 		{}
 		#region  BasicMethod
-
-		/// <summary>
-		/// 得到最大ID
-		/// </summary>
-		public int GetMaxId()
-		{
-			return dal.GetMaxId();
-		}
-
-		/// <summary>
-		/// 是否存在该记录
-		/// </summary>
-		public bool Exists(int A_ID)
-		{
-			return dal.Exists(A_ID);
-		}
 
 		/// <summary>
 		/// 增加一条数据

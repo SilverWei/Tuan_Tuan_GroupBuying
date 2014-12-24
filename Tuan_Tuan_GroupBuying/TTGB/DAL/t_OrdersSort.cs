@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:50   N/A    初版
+* V0.01  2014/12/24 16:15:52   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -97,17 +97,9 @@ namespace TTGB.DAL
 			{
 				strSql.Append("OS_Name='"+model.OS_Name+"',");
 			}
-			else
-			{
-				strSql.Append("OS_Name= null ,");
-			}
 			if (model.OS_B_Y_N != null)
 			{
 				strSql.Append("OS_B_Y_N="+ (model.OS_B_Y_N? 1 : 0) +",");
-			}
-			else
-			{
-				strSql.Append("OS_B_Y_N= null ,");
 			}
 			int n = strSql.ToString().LastIndexOf(",");
 			strSql.Remove(n, 1);

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{69371FBF-204D-4254-A049-D097781304CD}</ProjectGuid>
+    <ProjectGuid>{4E9DF9EC-949C-4C54-939C-D3329C554C62}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TTGB</RootNamespace>
@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Maticsoft.Common">
+      <HintPath>..\bin\Maticsoft.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Maticsoft.DBUtility">
+      <HintPath>..\bin\Maticsoft.DBUtility.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -37,12 +43,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TTGB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\TTGB.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\sysdiagrams.cs" />
     <Compile Include="BLL\t_Administrators.cs" />
     <Compile Include="BLL\t_Announcement.cs" />
     <Compile Include="BLL\t_Goods.cs" />
@@ -57,6 +60,7 @@
     <Compile Include="BLL\t_OrdersSort.cs" />
     <Compile Include="BLL\t_Users.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="DAL\sysdiagrams.cs" />
     <Compile Include="DAL\t_Administrators.cs" />
     <Compile Include="DAL\t_Announcement.cs" />
     <Compile Include="DAL\t_Goods.cs" />
@@ -70,6 +74,7 @@
     <Compile Include="DAL\t_OrdersShippingMethod.cs" />
     <Compile Include="DAL\t_OrdersSort.cs" />
     <Compile Include="DAL\t_Users.cs" />
+    <Compile Include="Model\sysdiagrams.cs" />
     <Compile Include="Model\t_Administrators.cs" />
     <Compile Include="Model\t_Announcement.cs" />
     <Compile Include="Model\t_Goods.cs" />

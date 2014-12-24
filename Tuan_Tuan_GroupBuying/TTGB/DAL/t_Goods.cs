@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:45   N/A    初版
+* V0.01  2014/12/24 16:15:48   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -98,6 +98,11 @@ namespace TTGB.DAL
 				strSql1.Append("G_Amount,");
 				strSql2.Append(""+model.G_Amount+",");
 			}
+			if (model.G_State != null)
+			{
+				strSql1.Append("G_State,");
+				strSql2.Append(""+(model.G_State? 1 : 0) +",");
+			}
 			if (model.G_PictureUrl != null)
 			{
 				strSql1.Append("G_PictureUrl,");
@@ -142,65 +147,37 @@ namespace TTGB.DAL
 			{
 				strSql.Append("G_Name='"+model.G_Name+"',");
 			}
-			else
-			{
-				strSql.Append("G_Name= null ,");
-			}
 			if (model.GS2_ID != null)
 			{
 				strSql.Append("GS2_ID="+model.GS2_ID+",");
-			}
-			else
-			{
-				strSql.Append("GS2_ID= null ,");
 			}
 			if (model.G_Brand != null)
 			{
 				strSql.Append("G_Brand='"+model.G_Brand+"',");
 			}
-			else
-			{
-				strSql.Append("G_Brand= null ,");
-			}
 			if (model.G_MarketPrice != null)
 			{
 				strSql.Append("G_MarketPrice="+model.G_MarketPrice+",");
-			}
-			else
-			{
-				strSql.Append("G_MarketPrice= null ,");
 			}
 			if (model.G_UserPrice != null)
 			{
 				strSql.Append("G_UserPrice="+model.G_UserPrice+",");
 			}
-			else
-			{
-				strSql.Append("G_UserPrice= null ,");
-			}
 			if (model.G_BuyPoints != null)
 			{
 				strSql.Append("G_BuyPoints="+model.G_BuyPoints+",");
-			}
-			else
-			{
-				strSql.Append("G_BuyPoints= null ,");
 			}
 			if (model.G_OfferDate != null)
 			{
 				strSql.Append("G_OfferDate='"+model.G_OfferDate+"',");
 			}
-			else
-			{
-				strSql.Append("G_OfferDate= null ,");
-			}
 			if (model.G_Amount != null)
 			{
 				strSql.Append("G_Amount="+model.G_Amount+",");
 			}
-			else
+			if (model.G_State != null)
 			{
-				strSql.Append("G_Amount= null ,");
+				strSql.Append("G_State="+ (model.G_State? 1 : 0) +",");
 			}
 			if (model.G_PictureUrl != null)
 			{
@@ -213,10 +190,6 @@ namespace TTGB.DAL
 			if (model.G_Text != null)
 			{
 				strSql.Append("G_Text='"+model.G_Text+"',");
-			}
-			else
-			{
-				strSql.Append("G_Text= null ,");
 			}
 			if (model.G_Note != null)
 			{
@@ -284,7 +257,7 @@ namespace TTGB.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("select  top 1  ");
-			strSql.Append(" G_ID,G_Name,GS2_ID,G_Brand,G_MarketPrice,G_UserPrice,G_BuyPoints,G_OfferDate,G_Amount,G_PictureUrl,G_Text,G_Note ");
+			strSql.Append(" G_ID,G_Name,GS2_ID,G_Brand,G_MarketPrice,G_UserPrice,G_BuyPoints,G_OfferDate,G_Amount,G_State,G_PictureUrl,G_Text,G_Note ");
 			strSql.Append(" from t_Goods ");
 			strSql.Append(" where G_ID="+G_ID+"" );
 			TTGB.Model.t_Goods model=new TTGB.Model.t_Goods();
@@ -325,11 +298,11 @@ namespace TTGB.DAL
 				}
 				if(row["G_MarketPrice"]!=null && row["G_MarketPrice"].ToString()!="")
 				{
-					model.G_MarketPrice=int.Parse(row["G_MarketPrice"].ToString());
+					model.G_MarketPrice=decimal.Parse(row["G_MarketPrice"].ToString());
 				}
 				if(row["G_UserPrice"]!=null && row["G_UserPrice"].ToString()!="")
 				{
-					model.G_UserPrice=int.Parse(row["G_UserPrice"].ToString());
+					model.G_UserPrice=decimal.Parse(row["G_UserPrice"].ToString());
 				}
 				if(row["G_BuyPoints"]!=null && row["G_BuyPoints"].ToString()!="")
 				{
@@ -342,6 +315,17 @@ namespace TTGB.DAL
 				if(row["G_Amount"]!=null && row["G_Amount"].ToString()!="")
 				{
 					model.G_Amount=int.Parse(row["G_Amount"].ToString());
+				}
+				if(row["G_State"]!=null && row["G_State"].ToString()!="")
+				{
+					if((row["G_State"].ToString()=="1")||(row["G_State"].ToString().ToLower()=="true"))
+					{
+						model.G_State=true;
+					}
+					else
+					{
+						model.G_State=false;
+					}
 				}
 				if(row["G_PictureUrl"]!=null)
 				{
@@ -365,7 +349,7 @@ namespace TTGB.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select G_ID,G_Name,GS2_ID,G_Brand,G_MarketPrice,G_UserPrice,G_BuyPoints,G_OfferDate,G_Amount,G_PictureUrl,G_Text,G_Note ");
+			strSql.Append("select G_ID,G_Name,GS2_ID,G_Brand,G_MarketPrice,G_UserPrice,G_BuyPoints,G_OfferDate,G_Amount,G_State,G_PictureUrl,G_Text,G_Note ");
 			strSql.Append(" FROM t_Goods ");
 			if(strWhere.Trim()!="")
 			{
@@ -385,7 +369,7 @@ namespace TTGB.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" G_ID,G_Name,GS2_ID,G_Brand,G_MarketPrice,G_UserPrice,G_BuyPoints,G_OfferDate,G_Amount,G_PictureUrl,G_Text,G_Note ");
+			strSql.Append(" G_ID,G_Name,GS2_ID,G_Brand,G_MarketPrice,G_UserPrice,G_BuyPoints,G_OfferDate,G_Amount,G_State,G_PictureUrl,G_Text,G_Note ");
 			strSql.Append(" FROM t_Goods ");
 			if(strWhere.Trim()!="")
 			{

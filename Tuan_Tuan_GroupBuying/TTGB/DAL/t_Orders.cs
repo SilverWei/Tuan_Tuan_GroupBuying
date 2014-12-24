@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:48   N/A    初版
+* V0.01  2014/12/24 16:15:50   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -137,73 +137,37 @@ namespace TTGB.DAL
 			{
 				strSql.Append("U_ID="+model.U_ID+",");
 			}
-			else
-			{
-				strSql.Append("U_ID= null ,");
-			}
 			if (model.O_buyDate != null)
 			{
 				strSql.Append("O_buyDate='"+model.O_buyDate+"',");
-			}
-			else
-			{
-				strSql.Append("O_buyDate= null ,");
 			}
 			if (model.O_Cnsignee != null)
 			{
 				strSql.Append("O_Cnsignee='"+model.O_Cnsignee+"',");
 			}
-			else
-			{
-				strSql.Append("O_Cnsignee= null ,");
-			}
 			if (model.O_ZipCode != null)
 			{
 				strSql.Append("O_ZipCode='"+model.O_ZipCode+"',");
-			}
-			else
-			{
-				strSql.Append("O_ZipCode= null ,");
 			}
 			if (model.O_Address != null)
 			{
 				strSql.Append("O_Address='"+model.O_Address+"',");
 			}
-			else
-			{
-				strSql.Append("O_Address= null ,");
-			}
 			if (model.O_Phone != null)
 			{
 				strSql.Append("O_Phone='"+model.O_Phone+"',");
-			}
-			else
-			{
-				strSql.Append("O_Phone= null ,");
 			}
 			if (model.OSM_ID != null)
 			{
 				strSql.Append("OSM_ID="+model.OSM_ID+",");
 			}
-			else
-			{
-				strSql.Append("OSM_ID= null ,");
-			}
 			if (model.OS_ID != null)
 			{
 				strSql.Append("OS_ID="+model.OS_ID+",");
 			}
-			else
-			{
-				strSql.Append("OS_ID= null ,");
-			}
 			if (model.O_GB_Y_N != null)
 			{
 				strSql.Append("O_GB_Y_N="+ (model.O_GB_Y_N? 1 : 0) +",");
-			}
-			else
-			{
-				strSql.Append("O_GB_Y_N= null ,");
 			}
 			if (model.O_Message != null)
 			{

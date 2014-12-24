@@ -136,7 +136,7 @@
                     <p>请修改订单状态:</p>
                     <asp:RadioButtonList ID="RadioButtonList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="OS_Name" DataValueField="OS_ID">
                     </asp:RadioButtonList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ConnectionStrings:Tuan Tuan GroupBuying%>" SelectCommand="Select * From t_OrdersSort Where OS_ID != 5"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ConnectionStrings:Tuan Tuan GroupBuying%>" SelectCommand="Select * From t_OrdersSort Where OS_ID != 5 and OS_ID != 8"></asp:SqlDataSource>
                 </div>
                 <input type="hidden" id="RenamingText2" runat="server" value="" />
                 <div class="modal-footer">

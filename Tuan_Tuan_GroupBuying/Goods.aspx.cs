@@ -76,9 +76,9 @@ public partial class Goods : System.Web.UI.Page
             Label12.Text = Login2.Rows[0]["GS2_Name"].ToString();
             DataTable Login3 = bllt_GoodsSort1st.GetList("[GS1_ID]='" + Login2.Rows[0]["GS1_ID"].ToString() + "'").Tables[0];
             Label13.Text = Login3.Rows[0]["GS1_Name"].ToString();
-
             Label2.Text = "品牌: " + Login1.Rows[0]["GB_Brand"].ToString();
             Label15.Text = "发布日期: " + Convert.ToDateTime(Login1.Rows[0]["GB_OfferDate"].ToString()).ToString("yyyy年MM月dd日");
+            Label16.Text = "结束日期: " + Convert.ToDateTime(Login1.Rows[0]["GB_EndDate"].ToString()).ToString("yyyy年MM月dd日");
             if (Login1.Rows[0]["GB_State"].ToString() == "True")
             {
                 State1.Visible = true;

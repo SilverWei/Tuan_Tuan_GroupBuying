@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:49   N/A    初版
+* V0.01  2014/12/24 16:15:51   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -18,7 +18,7 @@ using System;
 namespace TTGB.Model
 {
 	/// <summary>
-	/// t_OrdersGoods:实体类(属性说明自动提取数据库字段的描述信息)
+	/// 1
 	/// </summary>
 	[Serializable]
 	public partial class t_OrdersGoods
@@ -28,10 +28,10 @@ namespace TTGB.Model
 		#region Model
 		private int _og_id;
 		private int _o_id;
-		private int _g_id;
-		private int _gb_id;
+		private int? _g_id;
+		private int? _gb_id;
 		private int _og_quantity;
-		private int _og_totalprice;
+		private decimal _og_totalprice;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -51,7 +51,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int G_ID
+		public int? G_ID
 		{
 			set{ _g_id=value;}
 			get{return _g_id;}
@@ -59,7 +59,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int GB_ID
+		public int? GB_ID
 		{
 			set{ _gb_id=value;}
 			get{return _gb_id;}
@@ -75,7 +75,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int OG_TotalPrice
+		public decimal OG_TotalPrice
 		{
 			set{ _og_totalprice=value;}
 			get{return _og_totalprice;}

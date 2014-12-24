@@ -49,7 +49,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label>团购价</label>
+                                    <div class="clearfix"></div>
                                     <asp:TextBox ID="AddGroupPrice" class="form-control" runat="server" onkeyup="javascript:CheckInputIntFloat(this);"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label>截至日期</label>
+                                    <telerik:RadDatePicker ID="RadDatePicker1" runat="server"></telerik:RadDatePicker>
                                 </div>
                                 <div class="form-group">
                                     <label>团购人数底限</label>

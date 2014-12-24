@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:48   N/A    初版
+* V0.01  2014/12/24 16:15:50   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -18,7 +18,7 @@ using System;
 namespace TTGB.Model
 {
 	/// <summary>
-	/// t_GroupBuyingPicture:实体类(属性说明自动提取数据库字段的描述信息)
+	/// 1
 	/// </summary>
 	[Serializable]
 	public partial class t_GroupBuyingPicture
@@ -27,7 +27,7 @@ namespace TTGB.Model
 		{}
 		#region Model
 		private int _gbp_id;
-		private int? _gb_id;
+		private int _gb_id;
 		private string _gbp_url;
 		/// <summary>
 		/// 
@@ -40,7 +40,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? GB_ID
+		public int GB_ID
 		{
 			set{ _gb_id=value;}
 			get{return _gb_id;}

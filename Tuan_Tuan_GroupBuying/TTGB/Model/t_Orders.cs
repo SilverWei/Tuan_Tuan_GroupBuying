@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:48   N/A    初版
+* V0.01  2014/12/24 16:15:50   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -18,7 +18,7 @@ using System;
 namespace TTGB.Model
 {
 	/// <summary>
-	/// t_Orders:实体类(属性说明自动提取数据库字段的描述信息)
+	/// 1
 	/// </summary>
 	[Serializable]
 	public partial class t_Orders
@@ -27,14 +27,14 @@ namespace TTGB.Model
 		{}
 		#region Model
 		private int _o_id;
-		private int? _u_id;
-		private DateTime? _o_buydate;
+		private int _u_id;
+		private DateTime _o_buydate;
 		private string _o_cnsignee;
 		private string _o_zipcode;
 		private string _o_address;
 		private string _o_phone;
-		private int? _osm_id;
-		private int? _os_id;
+		private int _osm_id;
+		private int _os_id;
 		private bool _o_gb_y_n;
 		private string _o_message;
 		/// <summary>
@@ -48,7 +48,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? U_ID
+		public int U_ID
 		{
 			set{ _u_id=value;}
 			get{return _u_id;}
@@ -56,7 +56,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime? O_buyDate
+		public DateTime O_buyDate
 		{
 			set{ _o_buydate=value;}
 			get{return _o_buydate;}
@@ -96,7 +96,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? OSM_ID
+		public int OSM_ID
 		{
 			set{ _osm_id=value;}
 			get{return _osm_id;}
@@ -104,7 +104,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? OS_ID
+		public int OS_ID
 		{
 			set{ _os_id=value;}
 			get{return _os_id;}

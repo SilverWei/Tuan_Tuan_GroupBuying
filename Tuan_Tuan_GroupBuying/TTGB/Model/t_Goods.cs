@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:45   N/A    初版
+* V0.01  2014/12/24 16:15:48   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -18,7 +18,7 @@ using System;
 namespace TTGB.Model
 {
 	/// <summary>
-	/// t_Goods:实体类(属性说明自动提取数据库字段的描述信息)
+	/// 1
 	/// </summary>
 	[Serializable]
 	public partial class t_Goods
@@ -28,13 +28,14 @@ namespace TTGB.Model
 		#region Model
 		private int _g_id;
 		private string _g_name;
-		private int? _gs2_id;
+		private int _gs2_id;
 		private string _g_brand;
-		private int? _g_marketprice;
-		private int? _g_userprice;
-		private int? _g_buypoints;
-		private DateTime? _g_offerdate;
-		private int? _g_amount;
+		private decimal _g_marketprice;
+		private decimal _g_userprice;
+		private int _g_buypoints;
+		private DateTime _g_offerdate;
+		private int _g_amount;
+		private bool _g_state;
 		private string _g_pictureurl;
 		private string _g_text;
 		private string _g_note;
@@ -57,7 +58,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? GS2_ID
+		public int GS2_ID
 		{
 			set{ _gs2_id=value;}
 			get{return _gs2_id;}
@@ -73,7 +74,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? G_MarketPrice
+		public decimal G_MarketPrice
 		{
 			set{ _g_marketprice=value;}
 			get{return _g_marketprice;}
@@ -81,7 +82,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? G_UserPrice
+		public decimal G_UserPrice
 		{
 			set{ _g_userprice=value;}
 			get{return _g_userprice;}
@@ -89,7 +90,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? G_BuyPoints
+		public int G_BuyPoints
 		{
 			set{ _g_buypoints=value;}
 			get{return _g_buypoints;}
@@ -97,7 +98,7 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime? G_OfferDate
+		public DateTime G_OfferDate
 		{
 			set{ _g_offerdate=value;}
 			get{return _g_offerdate;}
@@ -105,10 +106,18 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? G_Amount
+		public int G_Amount
 		{
 			set{ _g_amount=value;}
 			get{return _g_amount;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public bool G_State
+		{
+			set{ _g_state=value;}
+			get{return _g_state;}
 		}
 		/// <summary>
 		/// 

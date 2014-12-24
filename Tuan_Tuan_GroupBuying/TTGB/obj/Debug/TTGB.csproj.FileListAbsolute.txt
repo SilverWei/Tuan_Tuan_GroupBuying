@@ -1,0 +1,6 @@
+E:\Tuan_Tuan_GroupBuying\Tuan_Tuan_GroupBuying\TTGB\bin\Debug\TTGB.dll
+E:\Tuan_Tuan_GroupBuying\Tuan_Tuan_GroupBuying\TTGB\bin\Debug\TTGB.pdb
+E:\Tuan_Tuan_GroupBuying\Tuan_Tuan_GroupBuying\TTGB\bin\Debug\Maticsoft.Common.dll
+E:\Tuan_Tuan_GroupBuying\Tuan_Tuan_GroupBuying\TTGB\bin\Debug\Maticsoft.DBUtility.dll
+E:\Tuan_Tuan_GroupBuying\Tuan_Tuan_GroupBuying\TTGB\obj\Debug\TTGB.dll
+E:\Tuan_Tuan_GroupBuying\Tuan_Tuan_GroupBuying\TTGB\obj\Debug\TTGB.pdb

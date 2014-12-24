@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:50   N/A    初版
+* V0.01  2014/12/24 16:15:53   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -142,10 +142,6 @@ namespace TTGB.DAL
 			{
 				strSql.Append("U_Name='"+model.U_Name+"',");
 			}
-			else
-			{
-				strSql.Append("U_Name= null ,");
-			}
 			if (model.U_RealName != null)
 			{
 				strSql.Append("U_RealName='"+model.U_RealName+"',");
@@ -182,41 +178,21 @@ namespace TTGB.DAL
 			{
 				strSql.Append("U_SignUP='"+model.U_SignUP+"',");
 			}
-			else
-			{
-				strSql.Append("U_SignUP= null ,");
-			}
 			if (model.U_Email != null)
 			{
 				strSql.Append("U_Email='"+model.U_Email+"',");
-			}
-			else
-			{
-				strSql.Append("U_Email= null ,");
 			}
 			if (model.U_Rank != null)
 			{
 				strSql.Append("U_Rank="+model.U_Rank+",");
 			}
-			else
-			{
-				strSql.Append("U_Rank= null ,");
-			}
 			if (model.U_Points != null)
 			{
 				strSql.Append("U_Points="+model.U_Points+",");
 			}
-			else
-			{
-				strSql.Append("U_Points= null ,");
-			}
 			if (model.U_Password != null)
 			{
 				strSql.Append("U_Password='"+model.U_Password+"',");
-			}
-			else
-			{
-				strSql.Append("U_Password= null ,");
 			}
 			if (model.U_Note != null)
 			{

@@ -88,6 +88,11 @@
                     <b style="float: right; font-size: 9px;">
                         <asp:Label ID="Label15" runat="server" Text="发布日期: 1234567"></asp:Label>
                     </b>
+                                        <div class="clearfix"></div>
+
+                    <b style="float: right; font-size: 9px;">
+                        <asp:Label ID="Label16" runat="server"></asp:Label>
+                    </b>
                 </div>
                 <div class="txt3">
                     <div class="txt4">

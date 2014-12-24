@@ -52,6 +52,10 @@
                                 <input type="text" runat="server" id="GB_GroupPrice" class="form-control" name="points" maxlength="10" onkeyup="javascript:CheckInputIntFloat(this);" />
                             </div>
                             <div class="form-group">
+                                <label>截至日期</label>
+                                <telerik:RadDatePicker ID="RadDatePicker1" runat="server"></telerik:RadDatePicker>
+                            </div>
+                            <div class="form-group">
                                 <label>团购人数底限</label>
                                 <input type="text" runat="server" id="GB_TotalNumber" class="form-control" name="points" onkeyup="this.value=this.value.replace(/\D/g,'')" maxlength="8" onafterpaste="this.value=this.value.replace(/\D/g,'')" />
                             </div>

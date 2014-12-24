@@ -58,6 +58,7 @@ public partial class New_GroupBuying : System.Web.UI.Page
                 ModGroupBuying.GB_TotalNumber = int.Parse(GB_TotalNumber.Value.ToString());
                 ModGroupBuying.GB_OfferDate = Convert.ToDateTime(ReleaseDate);
                 ModGroupBuying.GB_PictureUrl = PicUPTop();
+                ModGroupBuying.GB_EndDate = RadDatePicker1.SelectedDate;
                 bllGroupBuying.Add(ModGroupBuying);
                 PicUP();
                 Label1.Text = "成功";

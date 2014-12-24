@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:45   N/A    初版
+* V0.01  2014/12/24 16:15:47   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -30,25 +30,7 @@ namespace TTGB.DAL
 		{}
 		#region  Method
 
-		/// <summary>
-		/// 得到最大ID
-		/// </summary>
-		public int GetMaxId()
-		{
-		return DbHelperSQL.GetMaxID("A_ID", "t_Announcement"); 
-		}
 
-
-		/// <summary>
-		/// 是否存在该记录
-		/// </summary>
-		public bool Exists(int A_ID)
-		{
-			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select count(1) from t_Announcement");
-			strSql.Append(" where A_ID="+A_ID+" ");
-			return DbHelperSQL.Exists(strSql.ToString());
-		}
 
 		/// <summary>
 		/// 增加一条数据

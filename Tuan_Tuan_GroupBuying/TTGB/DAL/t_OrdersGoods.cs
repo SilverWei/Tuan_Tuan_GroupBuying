@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:49   N/A    初版
+* V0.01  2014/12/24 16:15:51   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -116,9 +116,17 @@ namespace TTGB.DAL
 			{
 				strSql.Append("G_ID="+model.G_ID+",");
 			}
+			else
+			{
+				strSql.Append("G_ID= null ,");
+			}
 			if (model.GB_ID != null)
 			{
 				strSql.Append("GB_ID="+model.GB_ID+",");
+			}
+			else
+			{
+				strSql.Append("GB_ID= null ,");
 			}
 			if (model.OG_Quantity != null)
 			{
@@ -231,7 +239,7 @@ namespace TTGB.DAL
 				}
 				if(row["OG_TotalPrice"]!=null && row["OG_TotalPrice"].ToString()!="")
 				{
-					model.OG_TotalPrice=int.Parse(row["OG_TotalPrice"].ToString());
+					model.OG_TotalPrice=decimal.Parse(row["OG_TotalPrice"].ToString());
 				}
 			}
 			return model;

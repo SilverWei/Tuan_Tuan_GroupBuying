@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:45   N/A    初版
+* V0.01  2014/12/24 16:15:47   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -58,50 +58,50 @@ namespace TTGB.DAL
 			StringBuilder strSql=new StringBuilder();
 			StringBuilder strSql1=new StringBuilder();
 			StringBuilder strSql2=new StringBuilder();
-			if (model.UA _Name != null)
+			if (model.UA_Name != null)
 			{
-				strSql1.Append("UA _Name,");
-				strSql2.Append("'"+model.UA _Name+"',");
+				strSql1.Append("UA_Name,");
+				strSql2.Append("'"+model.UA_Name+"',");
 			}
-			if (model.UA _RealName != null)
+			if (model.UA_RealName != null)
 			{
-				strSql1.Append("UA _RealName,");
-				strSql2.Append("'"+model.UA _RealName+"',");
+				strSql1.Append("UA_RealName,");
+				strSql2.Append("'"+model.UA_RealName+"',");
 			}
-			if (model.UA _Sex != null)
+			if (model.UA_Sex != null)
 			{
-				strSql1.Append("UA _Sex,");
-				strSql2.Append(""+(model.UA _Sex? 1 : 0) +",");
+				strSql1.Append("UA_Sex,");
+				strSql2.Append(""+(model.UA_Sex? 1 : 0) +",");
 			}
-			if (model.UA _Birthday != null)
+			if (model.UA_Birthday != null)
 			{
-				strSql1.Append("UA _Birthday,");
-				strSql2.Append("'"+model.UA _Birthday+"',");
+				strSql1.Append("UA_Birthday,");
+				strSql2.Append("'"+model.UA_Birthday+"',");
 			}
-			if (model.UA _Phone != null)
+			if (model.UA_Phone != null)
 			{
-				strSql1.Append("UA _Phone,");
-				strSql2.Append("'"+model.UA _Phone+"',");
+				strSql1.Append("UA_Phone,");
+				strSql2.Append("'"+model.UA_Phone+"',");
 			}
-			if (model.UA _SignUP != null)
+			if (model.UA_SignUP != null)
 			{
-				strSql1.Append("UA _SignUP,");
-				strSql2.Append("'"+model.UA _SignUP+"',");
+				strSql1.Append("UA_SignUP,");
+				strSql2.Append("'"+model.UA_SignUP+"',");
 			}
-			if (model.UA _Email != null)
+			if (model.UA_Email != null)
 			{
-				strSql1.Append("UA _Email,");
-				strSql2.Append("'"+model.UA _Email+"',");
+				strSql1.Append("UA_Email,");
+				strSql2.Append("'"+model.UA_Email+"',");
 			}
-			if (model.UA _Password != null)
+			if (model.UA_Password != null)
 			{
-				strSql1.Append("UA _Password,");
-				strSql2.Append("'"+model.UA _Password+"',");
+				strSql1.Append("UA_Password,");
+				strSql2.Append("'"+model.UA_Password+"',");
 			}
-			if (model.UA _Note != null)
+			if (model.UA_Note != null)
 			{
-				strSql1.Append("UA _Note,");
-				strSql2.Append("'"+model.UA _Note+"',");
+				strSql1.Append("UA_Note,");
+				strSql2.Append("'"+model.UA_Note+"',");
 			}
 			strSql.Append("insert into t_Administrators(");
 			strSql.Append(strSql1.ToString().Remove(strSql1.Length - 1));
@@ -128,77 +128,69 @@ namespace TTGB.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update t_Administrators set ");
-			if (model.UA _Name != null)
+			if (model.UA_Name != null)
 			{
-				strSql.Append("UA _Name='"+model.UA _Name+"',");
+				strSql.Append("UA_Name='"+model.UA_Name+"',");
+			}
+			if (model.UA_RealName != null)
+			{
+				strSql.Append("UA_RealName='"+model.UA_RealName+"',");
 			}
 			else
 			{
-				strSql.Append("UA _Name= null ,");
+				strSql.Append("UA_RealName= null ,");
 			}
-			if (model.UA _RealName != null)
+			if (model.UA_Sex != null)
 			{
-				strSql.Append("UA _RealName='"+model.UA _RealName+"',");
-			}
-			else
-			{
-				strSql.Append("UA _RealName= null ,");
-			}
-			if (model.UA _Sex != null)
-			{
-				strSql.Append("UA _Sex="+ (model.UA _Sex? 1 : 0) +",");
+				strSql.Append("UA_Sex="+ (model.UA_Sex? 1 : 0) +",");
 			}
 			else
 			{
-				strSql.Append("UA _Sex= null ,");
+				strSql.Append("UA_Sex= null ,");
 			}
-			if (model.UA _Birthday != null)
+			if (model.UA_Birthday != null)
 			{
-				strSql.Append("UA _Birthday='"+model.UA _Birthday+"',");
-			}
-			else
-			{
-				strSql.Append("UA _Birthday= null ,");
-			}
-			if (model.UA _Phone != null)
-			{
-				strSql.Append("UA _Phone='"+model.UA _Phone+"',");
+				strSql.Append("UA_Birthday='"+model.UA_Birthday+"',");
 			}
 			else
 			{
-				strSql.Append("UA _Phone= null ,");
+				strSql.Append("UA_Birthday= null ,");
 			}
-			if (model.UA _SignUP != null)
+			if (model.UA_Phone != null)
 			{
-				strSql.Append("UA _SignUP='"+model.UA _SignUP+"',");
-			}
-			else
-			{
-				strSql.Append("UA _SignUP= null ,");
-			}
-			if (model.UA _Email != null)
-			{
-				strSql.Append("UA _Email='"+model.UA _Email+"',");
+				strSql.Append("UA_Phone='"+model.UA_Phone+"',");
 			}
 			else
 			{
-				strSql.Append("UA _Email= null ,");
+				strSql.Append("UA_Phone= null ,");
 			}
-			if (model.UA _Password != null)
+			if (model.UA_SignUP != null)
 			{
-				strSql.Append("UA _Password='"+model.UA _Password+"',");
-			}
-			else
-			{
-				strSql.Append("UA _Password= null ,");
-			}
-			if (model.UA _Note != null)
-			{
-				strSql.Append("UA _Note='"+model.UA _Note+"',");
+				strSql.Append("UA_SignUP='"+model.UA_SignUP+"',");
 			}
 			else
 			{
-				strSql.Append("UA _Note= null ,");
+				strSql.Append("UA_SignUP= null ,");
+			}
+			if (model.UA_Email != null)
+			{
+				strSql.Append("UA_Email='"+model.UA_Email+"',");
+			}
+			else
+			{
+				strSql.Append("UA_Email= null ,");
+			}
+			if (model.UA_Password != null)
+			{
+				strSql.Append("UA_Password='"+model.UA_Password+"',");
+			}
+			if (model.UA_Note != null)
+			{
+				strSql.Append("UA_Note='"+model.UA_Note+"',");
+			}
+			else
+			{
+				strSql.Append("UA_Note= null ,");
 			}
 			int n = strSql.ToString().LastIndexOf(",");
 			strSql.Remove(n, 1);
@@ -258,7 +250,7 @@ namespace TTGB.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("select  top 1  ");
-			strSql.Append(" UA_ID,UA _Name,UA _RealName,UA _Sex,UA _Birthday,UA _Phone,UA _SignUP,UA _Email,UA _Password,UA _Note ");
+			strSql.Append(" UA_ID,UA_Name,UA_RealName,UA_Sex,UA_Birthday,UA_Phone,UA_SignUP,UA_Email,UA_Password,UA_Note ");
 			strSql.Append(" from t_Administrators ");
 			strSql.Append(" where UA_ID="+UA_ID+"" );
 			TTGB.Model.t_Administrators model=new TTGB.Model.t_Administrators();
@@ -285,48 +277,48 @@ namespace TTGB.DAL
 				{
 					model.UA_ID=int.Parse(row["UA_ID"].ToString());
 				}
-				if(row["UA _Name"]!=null)
+				if(row["UA_Name"]!=null)
 				{
-					model.UA _Name=row["UA _Name"].ToString();
+					model.UA_Name=row["UA_Name"].ToString();
 				}
-				if(row["UA _RealName"]!=null)
+				if(row["UA_RealName"]!=null)
 				{
-					model.UA _RealName=row["UA _RealName"].ToString();
+					model.UA_RealName=row["UA_RealName"].ToString();
 				}
-				if(row["UA _Sex"]!=null && row["UA _Sex"].ToString()!="")
+				if(row["UA_Sex"]!=null && row["UA_Sex"].ToString()!="")
 				{
-					if((row["UA _Sex"].ToString()=="1")||(row["UA _Sex"].ToString().ToLower()=="true"))
+					if((row["UA_Sex"].ToString()=="1")||(row["UA_Sex"].ToString().ToLower()=="true"))
 					{
-						model.UA _Sex=true;
+						model.UA_Sex=true;
 					}
 					else
 					{
-						model.UA _Sex=false;
+						model.UA_Sex=false;
 					}
 				}
-				if(row["UA _Birthday"]!=null && row["UA _Birthday"].ToString()!="")
+				if(row["UA_Birthday"]!=null && row["UA_Birthday"].ToString()!="")
 				{
-					model.UA _Birthday=DateTime.Parse(row["UA _Birthday"].ToString());
+					model.UA_Birthday=DateTime.Parse(row["UA_Birthday"].ToString());
 				}
-				if(row["UA _Phone"]!=null)
+				if(row["UA_Phone"]!=null)
 				{
-					model.UA _Phone=row["UA _Phone"].ToString();
+					model.UA_Phone=row["UA_Phone"].ToString();
 				}
-				if(row["UA _SignUP"]!=null && row["UA _SignUP"].ToString()!="")
+				if(row["UA_SignUP"]!=null && row["UA_SignUP"].ToString()!="")
 				{
-					model.UA _SignUP=DateTime.Parse(row["UA _SignUP"].ToString());
+					model.UA_SignUP=DateTime.Parse(row["UA_SignUP"].ToString());
 				}
-				if(row["UA _Email"]!=null)
+				if(row["UA_Email"]!=null)
 				{
-					model.UA _Email=row["UA _Email"].ToString();
+					model.UA_Email=row["UA_Email"].ToString();
 				}
-				if(row["UA _Password"]!=null)
+				if(row["UA_Password"]!=null)
 				{
-					model.UA _Password=row["UA _Password"].ToString();
+					model.UA_Password=row["UA_Password"].ToString();
 				}
-				if(row["UA _Note"]!=null)
+				if(row["UA_Note"]!=null)
 				{
-					model.UA _Note=row["UA _Note"].ToString();
+					model.UA_Note=row["UA_Note"].ToString();
 				}
 			}
 			return model;
@@ -338,7 +330,7 @@ namespace TTGB.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select UA_ID,UA _Name,UA _RealName,UA _Sex,UA _Birthday,UA _Phone,UA _SignUP,UA _Email,UA _Password,UA _Note ");
+			strSql.Append("select UA_ID,UA_Name,UA_RealName,UA_Sex,UA_Birthday,UA_Phone,UA_SignUP,UA_Email,UA_Password,UA_Note ");
 			strSql.Append(" FROM t_Administrators ");
 			if(strWhere.Trim()!="")
 			{
@@ -358,7 +350,7 @@ namespace TTGB.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" UA_ID,UA _Name,UA _RealName,UA _Sex,UA _Birthday,UA _Phone,UA _SignUP,UA _Email,UA _Password,UA _Note ");
+			strSql.Append(" UA_ID,UA_Name,UA_RealName,UA_Sex,UA_Birthday,UA_Phone,UA_SignUP,UA_Email,UA_Password,UA_Note ");
 			strSql.Append(" FROM t_Administrators ");
 			if(strWhere.Trim()!="")
 			{

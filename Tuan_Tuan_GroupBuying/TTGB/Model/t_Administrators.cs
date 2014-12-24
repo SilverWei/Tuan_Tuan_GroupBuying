@@ -6,7 +6,7 @@
 *
 * Ver    变更日期             负责人  变更内容
 * ───────────────────────────────────
-* V0.01  2014/12/11 11:26:45   N/A    初版
+* V0.01  2014/12/24 16:15:47   N/A    初版
 *
 * Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
 *┌──────────────────────────────────┐
@@ -18,7 +18,7 @@ using System;
 namespace TTGB.Model
 {
 	/// <summary>
-	/// t_Administrators:实体类(属性说明自动提取数据库字段的描述信息)
+	/// 1
 	/// </summary>
 	[Serializable]
 	public partial class t_Administrators
@@ -27,15 +27,15 @@ namespace TTGB.Model
 		{}
 		#region Model
 		private int _ua_id;
-		private string _ua _name;
-		private string _ua _realname;
-		private bool _ua _sex;
-		private DateTime? _ua _birthday;
-		private string _ua _phone;
-		private DateTime? _ua _signup;
-		private string _ua _email;
-		private string _ua _password;
-		private string _ua _note;
+		private string _ua_name;
+		private string _ua_realname;
+		private bool _ua_sex;
+		private DateTime? _ua_birthday;
+		private string _ua_phone;
+		private DateTime? _ua_signup;
+		private string _ua_email;
+		private string _ua_password;
+		private string _ua_note;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -47,74 +47,74 @@ namespace TTGB.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string UA _Name
+		public string UA_Name
 		{
-			set{ _ua _name=value;}
-			get{return _ua _name;}
+			set{ _ua_name=value;}
+			get{return _ua_name;}
 		}
 		/// <summary>
 		/// 
 		/// </summary>
-		public string UA _RealName
+		public string UA_RealName
 		{
-			set{ _ua _realname=value;}
-			get{return _ua _realname;}
+			set{ _ua_realname=value;}
+			get{return _ua_realname;}
 		}
 		/// <summary>
 		/// 
 		/// </summary>
-		public bool UA _Sex
+		public bool UA_Sex
 		{
-			set{ _ua _sex=value;}
-			get{return _ua _sex;}
+			set{ _ua_sex=value;}
+			get{return _ua_sex;}
 		}
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime? UA _Birthday
+		public DateTime? UA_Birthday
 		{
-			set{ _ua _birthday=value;}
-			get{return _ua _birthday;}
+			set{ _ua_birthday=value;}
+			get{return _ua_birthday;}
 		}
 		/// <summary>
 		/// 
 		/// </summary>
-		public string UA _Phone
+		public string UA_Phone
 		{
-			set{ _ua _phone=value;}
-			get{return _ua _phone;}
+			set{ _ua_phone=value;}
+			get{return _ua_phone;}
 		}
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime? UA _SignUP
+		public DateTime? UA_SignUP
 		{
-			set{ _ua _signup=value;}
-			get{return _ua _signup;}
+			set{ _ua_signup=value;}
+			get{return _ua_signup;}
 		}
 		/// <summary>
 		/// 
 		/// </summary>
-		public string UA _Email
+		public string UA_Email
 		{
-			set{ _ua _email=value;}
-			get{return _ua _email;}
+			set{ _ua_email=value;}
+			get{return _ua_email;}
 		}
 		/// <summary>
 		/// 
 		/// </summary>
-		public string UA _Password
+		public string UA_Password
 		{
-			set{ _ua _password=value;}
-			get{return _ua _password;}
+			set{ _ua_password=value;}
+			get{return _ua_password;}
 		}
 		/// <summary>
 		/// 
 		/// </summary>
-		public string UA _Note
+		public string UA_Note
 		{
-			set{ _ua _note=value;}
-			get{return _ua _note;}
+			set{ _ua_note=value;}
+			get{return _ua_note;}
 		}
 		#endregion Model
 
