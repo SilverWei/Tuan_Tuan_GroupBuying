@@ -65,7 +65,7 @@ public partial class Management_GroupBuying : System.Web.UI.Page
             DropDownList1.Text = Request.QueryString["Wer"].ToString();
             SeaBox.Text = Request.QueryString["Ser"].ToString();
         }
-        SqlDataSource4.SelectCommand = "Select * From [t_GroupBuying] Where " + OrderText + " Like '%" + Request.QueryString["Ser"].ToString() + "%' " + SerDate + " order by GB_ID desc";
+        SqlDataSource4.SelectCommand = "Select [t_GroupBuying].*,A.OrdersGoodsNumber From [t_GroupBuying] left join (select COUNT(*) as OrdersGoodsNumber,GB_ID from [t_OrdersGoods] group by GB_ID) as A on A.GB_ID = [t_GroupBuying].GB_ID Where [t_GroupBuying]." + OrderText + " Like '%" + Request.QueryString["Ser"].ToString() + "%' " + SerDate + " order by [t_GroupBuying].GB_ID desc";
     }
 
 
@@ -106,7 +106,7 @@ public partial class Management_GroupBuying : System.Web.UI.Page
             GS2_Text.Text = Login1.Rows[0]["GS2_Name"].ToString();
 
         }
-        SqlDataSource4.SelectCommand = "Select * From t_GroupBuying Where GS2_ID='" + Request.QueryString["GS2"].ToString() + "' " + SerDate + " order by GB_ID desc";
+        SqlDataSource4.SelectCommand = "Select [t_GroupBuying].*,A.OrdersGoodsNumber From [t_GroupBuying] left join (select COUNT(*) as OrdersGoodsNumber,GB_ID from [t_OrdersGoods] group by GB_ID) as A on A.GB_ID = [t_GroupBuying].GB_ID Where [t_GroupBuying].GS2_ID='" + Request.QueryString["GS2"].ToString() + "' " + SerDate + " order by [t_GroupBuying].GB_ID desc";
 
     }
 

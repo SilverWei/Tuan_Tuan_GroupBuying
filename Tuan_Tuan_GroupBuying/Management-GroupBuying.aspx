@@ -120,6 +120,7 @@
                                     <th>发布日期</th>
                                     <th>价格</th>
                                     <th>成团人数</th>
+                                    <th>参与人数</th>
                                     <th>编辑</th>
                                 </tr>
                             </thead>
@@ -142,6 +143,7 @@
                             <td class="center" style="width: 152px;"><%#Eval("[GB_OfferDate]","{0:yyyy年 MM月 dd日}") %></td>
                             <td class="center">¥ <%#Eval("[GB_GroupPrice]") %></td>
                             <td class="center"><%#Eval("GB_TotalNumber") %></td>
+                            <td class="center"><%# (Eval("OrdersGoodsNumber").ToString() == ""?"无":Eval("OrdersGoodsNumber")) %></td>
                             <td class="center">
                                 <a class="btn btn-info" href="Edit_GroupBuying.aspx?GB=<%#Eval("GB_ID")  %><%= (Request.QueryString["GS2"]!=null?"&GS2="+Request.QueryString["GS2"].ToString():"") +(Request.QueryString["Ser"]!=null?"&Ser="+Request.QueryString["Ser"].ToString():"") +(Request.QueryString["Wer"]!=null?"&Wer="+Request.QueryString["Wer"].ToString():"") %>">
                                     <i class="glyphicon glyphicon-edit icon-white"></i>
