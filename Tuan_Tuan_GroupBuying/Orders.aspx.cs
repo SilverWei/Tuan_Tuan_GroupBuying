@@ -35,9 +35,9 @@ public partial class Orders : System.Web.UI.Page
     }
     public void G_Show()
     {
-        if (Request.Cookies["ShoppingCart"] != null && Request.QueryString["GB"] == null)
+        if (Request.Cookies["OrdersGoods"] != null && Request.QueryString["GB"] == null)
         {
-            HttpCookie ShoppingCart_cookie = Request.Cookies["ShoppingCart"];
+            HttpCookie ShoppingCart_cookie = Request.Cookies["OrdersGoods"];
             StringBuilder sp = new StringBuilder();
             float TotalPrice = 0;
             for (int i = 0; i < ShoppingCart_cookie.Values.Count; i++)
