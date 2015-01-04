@@ -10,24 +10,7 @@
         function DelG_ID(G_ID) {
             document.cookie = 'DelG_ID = ' + G_ID;//创建Cookies
         }
-        $("#waitWork").click(function () {
-            var url = "请求地址";
-            var data = { type: 1 };
-            $.ajax({
-                type: "get",
-                async: false,  //同步请求  
-                url: url,
-                data: data,
-                timeout: 1000,
-                success: function (dates) {
-                    //alert(dates);  
-                    $("#mainContent").html(dates);//要刷新的div  
-                },
-                error: function () {
-                    // alert("失败，请稍后再试！");  
-                }
-            });
-        });
+
     </script>
 
 </asp:Content>
@@ -74,7 +57,7 @@
     </div>
 
 
-    <div class="row" id="mainContent">
+    <div class="row">
         <div class="box col-md-12">
             <div class="box-inner">
                 <div class="box-header well" data-original-title="">

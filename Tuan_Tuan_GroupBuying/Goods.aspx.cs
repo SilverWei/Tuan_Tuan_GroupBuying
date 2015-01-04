@@ -23,14 +23,33 @@ public partial class Goods : System.Web.UI.Page
     public string Amount = "";
     protected void Page_Load(object sender, EventArgs e)
     {
-        try
+        //try
+        //{
+        if (Request.QueryString["G_ID"] != null)///如果Url的显示为？G_ID则显示Goods商品显示
         {
-            GoodsShow();
+            DataTable Login1 = bllt_Goods.GetList("[G_ID]='" + Request.QueryString["G_ID"].ToString() + "'").Tables[0];
+            if (Login1.Rows.Count > 0)//是否有数据，有数据则成功否则为游客
+                GoodsShow();
+            else
+                Response.Write("<script>alert(\"相关产品信息已被管理员删除或不存在！\");window.location.href = 'Home.aspx';</script>");
         }
-        catch
+        else if(Request.QueryString["GB_ID"] != null)
         {
-            Response.Write("<script>alert(\"相关产品信息已被管理员删除!\");self.close()</script>");
+            DataTable Login1 = bllt_GroupBuying.GetList("[GB_ID]='" + Request.QueryString["GB_ID"].ToString() + "'").Tables[0];
+            if (Login1.Rows.Count > 0)//是否有数据，有数据则成功否则为游客
+                GoodsShow();
+            else
+                Response.Write("<script>alert(\"相关产品信息已被管理员删除或不存在！\");window.location.href = 'Home.aspx';</script>");
         }
+        else
+        {
+            Response.Write("<script>alert(\"输入地址有误！\");window.location.href = 'Home.aspx';</script>");
+        }
+        //}
+        //catch
+        //{
+        //    Response.Write("<script>alert(\"相关产品信息已被管理员删除!\");self.close()</script>");
+        //}
         ShoppingCart_Show();
         ShoppingCart_Inspection();
     }
