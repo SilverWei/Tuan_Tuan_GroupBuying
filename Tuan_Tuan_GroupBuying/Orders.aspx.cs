@@ -215,13 +215,25 @@ public partial class Orders : System.Web.UI.Page
         }
     }
 
+    /// <summary>
+    /// 处理购物车
+    /// </summary>
     public void DelShoppingCart()
     {
         if (Request.Cookies["ShoppingCart"] != null)
         {
             HttpCookie ShoppingCart_cookie = Request.Cookies["ShoppingCart"];
+            HttpCookie ShoppingCartNay_cookie = Request.Cookies["OrdersGoodsNay"];
+            if (ShoppingCartNay_cookie.Value != "")
+            {
+                ShoppingCart_cookie.Value = ShoppingCartNay_cookie.Value;
+                Response.Cookies.Add(ShoppingCart_cookie);
+            }
+            else
+            {
             ShoppingCart_cookie.Expires = DateTime.Now.AddDays(-1);
             Response.Cookies.Add(ShoppingCart_cookie);
+            }
         }
     }
 

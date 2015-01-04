@@ -18,11 +18,19 @@
                     testValue += test[i].value + "&";
                 }
             }
+            testValueNay = "";
+            for (i = 0; i < test.length ; i++) {
+                if (test[i].checked == false) {
+                    testValueNay += test[i].value + "&";
+                }
+            }
+            testValueNay = testValueNay.substring(0, testValueNay.length - 1);
             testValue = testValue.substring(0, testValue.length - 1);
             if (testValue == "")
                 alert("请选定要购买的商品！");
             else {
                 document.cookie = 'OrdersGoods = ' + testValue;//创建商品订单cookies
+                document.cookie = 'OrdersGoodsNay = ' + testValueNay;//创建商品订单cookies
                 window.location.href = 'Orders.aspx';
             }
         }
