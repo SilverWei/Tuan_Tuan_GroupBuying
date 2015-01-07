@@ -39,7 +39,7 @@ public partial class OrdersSortGB : System.Web.UI.Page
 
     public void count()
     {
-        DataTable Login1 = DbHelperSQL.Query("Select sum(OG_TotalPrice) as [counts] from [dbo].[t_OrdersGoods] Left join [dbo].[t_Orders] on ([dbo].[t_OrdersGoods].O_ID =[dbo].[t_Orders].O_ID  )where (OS_ID <6 and OS_ID!=3 ) and  GB_ID is not null").Tables[0];
+        DataTable Login1 = DbHelperSQL.Query("Select sum(OG_TotalPrice) as [counts] from [dbo].[t_OrdersGoods] Left join [dbo].[t_Orders] on ([dbo].[t_OrdersGoods].O_ID =[dbo].[t_Orders].O_ID  )where (OS_ID = 2 or OS_ID = 3 or OS_ID = 7 ) and  GB_ID is not null and U_ID = " + Request.Cookies["UserId"].Value + "").Tables[0];
         OG_TotalPrice = Login1.Rows[0]["counts"].ToString();
     }
 

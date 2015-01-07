@@ -42,7 +42,7 @@
                             <table class="table table-striped table-bordered responsive">
                                 <thead>
                                     <tr>
-                                        <th>总消费：¥ <%= OG_TotalPrice %></th>
+                                        <th>总消费：¥ <%= OG_TotalPrice == ""?"0":OG_TotalPrice %></th>
                                     </tr>
                                 </thead>
                             </table>

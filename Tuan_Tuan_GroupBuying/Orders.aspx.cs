@@ -127,7 +127,7 @@ public partial class Orders : System.Web.UI.Page
     /// <returns></returns>
     public static bool IsMobilePhone(string input)
     {
-        const string regPattern = @"^(130|131|132|133|156|134|135|136|137|138|139)\d{8}$";
+        const string regPattern = @"^(130|131|132|153|180|181|189|155|156|145|185|186|176|185|178|147|157|187|188|133|156|134|135|136|137|138|139)\d{8}$";
         return Regex.IsMatch(input, regPattern);
     }
     /// <summary>

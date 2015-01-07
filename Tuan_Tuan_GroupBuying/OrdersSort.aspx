@@ -43,8 +43,8 @@
                             <table class="table table-striped table-bordered responsive">
                                 <thead>
                                     <tr>
-                                        <th>总消费：¥ <%= OG_TotalPrice %>
-                                        </th>                                    
+                                        <th>总消费：¥ <%= OG_TotalPrice == ""?"0":OG_TotalPrice %>
+                                        </th>
                                     </tr>
                                 </thead>
                             </table>
@@ -83,7 +83,6 @@
                                                         <th>生成日期</th>
                                                         <th>总计</th>
                                                         <th>状态</th>
-<%--                                                        <th>编辑</th>--%>
                                                     </tr>
                                                 </thead>
                                                 <thead id="item" runat="server">
